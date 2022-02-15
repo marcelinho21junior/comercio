@@ -1,7 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 //css 
 import './Home.css'
+
+//components
+import Login from '../../Components/TelaLogin/TelaLogin'
 
 //img
 import milk from '../../Img/milk1.png'
@@ -10,18 +14,24 @@ import lancheNatural from '../../Img/lancheNatural.png'
 
 
 export default function Home() {
+  
+  function slide(){
+    var img = document.querySelector('#imgCenter')
 
+    img.setAttribute('src','coxinha')
+  }
 
   return (
     <div className='app'>
+      <div className='circle'></div>
         <div className="header">
-        <div>
-          <img className='imgHeader' src={milk}/>
+        <div className="headerTitle">
+          <h2>Lanche<span>Já</span></h2>
         </div>
         <div className='spanHeader'>
-          <span>Home</span>
-          <span>Home</span>
-          <span>Home</span>
+          <Link to={'/'}><span>Home</span></Link>
+          <Link to={'/search'}><span>Pesquisar Lojas</span></Link>
+          <Link to={'/search'}><span>Entrar</span></Link>
         </div>
       </div>
 
@@ -37,10 +47,12 @@ export default function Home() {
       </div>
 
       <div className='footerBtn'>
-          <img className='footerBtnImg' src={milk}/>
+          <button onClick={slide}>oi</button>
+          <img onClick={"slide('coxinha')"} className='footerBtnImg' src={milk}/>
           <img className='footerBtnImg' src={coxinha}/>
           <img className='footerBtnImg' src={lancheNatural}/>
       </div>
-    </div>
+      <Login/>
+    </div>//app
   );
 }
