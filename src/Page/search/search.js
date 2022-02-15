@@ -14,7 +14,6 @@ export default function Seach() {
         </div>
         <div className='spanHeader'>
           <Link to={'/'}><span>Home</span></Link>
-          <Link to={'/search'}><span>Pesquisar Lojas</span></Link>
           <Link to={'/search'}><span>Entrar</span></Link>
         </div>
       </div>

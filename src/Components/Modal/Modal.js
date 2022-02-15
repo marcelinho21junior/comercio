@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import TelaLogin from '../TelaLogin/TelaLogin';
 import TelaRegistro from '../TelaRegistro/TelaRegistro';
 
-export default function Modal() {
+export default function Modal({closeModal}) {
     const [isLogin, setIsLogin] = useState(true)
 
     function setLoginForm(){
@@ -16,6 +16,7 @@ export default function Modal() {
   
     return (
     <div className='backdrop'>
+      <button className='buttonFechar' onClick={closeModal}>Fechar</button>
       {isLogin ? <TelaLogin setRegisterForm={setRegisterForm}/> : <TelaRegistro setLoginForm={setLoginForm}/>}
     </div>//app
   );

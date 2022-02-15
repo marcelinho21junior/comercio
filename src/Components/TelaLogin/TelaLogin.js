@@ -12,7 +12,7 @@ export default function TelaLogin({setRegisterForm}) {
         <form action=''>
             <input type={'text'} placeholder='Email'/>
             <input type={'text'} placeholder='Senha'/>
-              <button>Entrar</button>
+              <button><Link to={'/dashboard'} className='LinkEntrar'>Entrar</Link></button>
               <div className='CriarContaTelaLogin'>
                 <p onClick={setRegisterForm}><span>Criar conta</span></p>
               </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 
 //css 
@@ -6,26 +6,37 @@ import './Home.css'
 
 //components
 import Modal from '../../Components/Modal/Modal'
+import navbar from '../../Components/Navbar/Navbar'
 
 //img
 import milk from '../../Img/milk1.png'
 import coxinha from '../../Img/coxinha.png'
 import lancheNatural from '../../Img/lancheNatural.png'
+import Navbar from '../../Components/Navbar/Navbar'
 
 
 export default function Home() {
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  function openModal(){
+    setIsModalOpen(true)
+  }
+
+  function closeModal(){
+    setIsModalOpen(false)
+  }
+
   return (
     <div className='app'>
       <div className='circle'></div>
-        <div className="header">
+      <div className="header" setIsModalOpen={openModal}>
         <div className="headerTitle">
           <h2>Lanche<span>Já</span></h2>
         </div>
         <div className='spanHeader'>
-          <Link to={'/'}><span>Home</span></Link>
           <Link to={'/search'}><span>Pesquisar Lojas</span></Link>
-          <Link to={'/search'}><span>Entrar</span></Link>
+          <p onClick={openModal}><span>Entrar</span></p>
         </div>
       </div>
 
@@ -45,7 +56,7 @@ export default function Home() {
           <img className='footerBtnImg' alt="" src={coxinha}/>
           <img className='footerBtnImg' alt="" src={lancheNatural}/>
       </div>
-        <Modal/>
+        {isModalOpen ? <Modal closeModal={closeModal} /> : null}
     </div>//app
   );
 }

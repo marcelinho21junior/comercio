@@ -13,6 +13,18 @@
     flex-direction: column;
 }
 
+.backdrop .buttonFechar{
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
 .modal{
     display: flex;
     justify-content: center;
@@ -60,6 +72,11 @@ form button{
     cursor: pointer;
 }
 
+.LinkEntrar{
+    color: white;
+    text-decoration: none;
+}
+
 form button:hover{
     color: rgb(248, 103, 46);
     font-weight: 600;
@@ -70,6 +87,10 @@ form button:hover{
 
 .CriarContaTelaLogin{
     width: 90%;
+}
+
+.CriarContaTelaLogin p{
+    cursor: pointer;
 }
 
 form span{

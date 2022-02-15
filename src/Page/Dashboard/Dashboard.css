@@ -1,0 +1,51 @@
+.App{
+    height: 100vh;
+}
+
+.spanHeader button{
+    width: 30%;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(253, 121, 32);
+}
+
+.dashCards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+    height: 90%;
+    width: 100%;
+}
+
+.LinkCards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(249, 252, 255);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px black;
+    height: 50%;
+    width: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 10%;
+    width: 100%;
+}
+
+.Cards p{
+    text-align:center;
+    font-weight: 500;
+}

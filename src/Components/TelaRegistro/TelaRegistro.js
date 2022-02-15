@@ -8,7 +8,7 @@ export default function TelaRegistro({setLoginForm}) {
   return (
     <div className='backdrop'>
       <div className='modal'>
-        <h3>Entrar</h3>
+        <h3>Criar uma conta</h3>
         <form action=''>
             <input type={'text'} placeholder='Nome'/>
             <input type={'text'} placeholder='Whatsapp'/>
