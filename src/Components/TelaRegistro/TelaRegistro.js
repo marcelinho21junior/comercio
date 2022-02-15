@@ -2,19 +2,21 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 //css
-import './TelaLogin.css'
+import './TelaRegistro.css'
 
-export default function TelaLogin({setRegisterForm}) {
+export default function TelaRegistro({setLoginForm}) {
   return (
     <div className='backdrop'>
       <div className='modal'>
         <h3>Entrar</h3>
         <form action=''>
+            <input type={'text'} placeholder='Nome'/>
+            <input type={'text'} placeholder='Whatsapp'/>
             <input type={'text'} placeholder='Email'/>
             <input type={'text'} placeholder='Senha'/>
-              <button>Entrar</button>
+              <button>Cadastrar</button>
               <div className='CriarContaTelaLogin'>
-                <p onClick={setRegisterForm}><span>Criar conta</span></p>
+                <p onClick={setLoginForm}><span>Já tenho uma conta</span></p>
               </div>
         </form>
       </div>

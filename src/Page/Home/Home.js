@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import './Home.css'
 
 //components
-import Login from '../../Components/TelaLogin/TelaLogin'
+import Modal from '../../Components/Modal/Modal'
 
 //img
 import milk from '../../Img/milk1.png'
@@ -14,12 +14,6 @@ import lancheNatural from '../../Img/lancheNatural.png'
 
 
 export default function Home() {
-  
-  function slide(){
-    var img = document.querySelector('#imgCenter')
-
-    img.setAttribute('src','coxinha')
-  }
 
   return (
     <div className='app'>
@@ -42,17 +36,16 @@ export default function Home() {
           <button>Saiba Mais</button>
         </div>
         <div className='infoCenterancheImg'>
-          <img id='imgCenter' className='LancheImg' src={milk}/>
+          <img id='imgCenter' className='LancheImg' alt="" src={milk}/>
         </div>  
       </div>
 
       <div className='footerBtn'>
-          <button onClick={slide}>oi</button>
-          <img onClick={"slide('coxinha')"} className='footerBtnImg' src={milk}/>
-          <img className='footerBtnImg' src={coxinha}/>
-          <img className='footerBtnImg' src={lancheNatural}/>
+          <img className='footerBtnImg' alt="" src={milk}/>
+          <img className='footerBtnImg' alt="" src={coxinha}/>
+          <img className='footerBtnImg' alt="" src={lancheNatural}/>
       </div>
-      <Login/>
+        <Modal/>
     </div>//app
   );
 }

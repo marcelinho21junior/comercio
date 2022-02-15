@@ -4,13 +4,6 @@ import {Link} from 'react-router-dom'
 //css
 import './search.css'
 
-//componentes
-import Cards from '../../Components/Cards/Cards'
-
-//img
-import milk from '../../Img/milk1.png'
-import coxinha from '../../Img/coxinha.png'
-import lancheNatural from '../../Img/lancheNatural.png'
 
 export default function Seach() {
   return (
